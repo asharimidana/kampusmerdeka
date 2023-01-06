@@ -79,3 +79,11 @@ semua element di dalam aplikasi dibuat aga bisa berjalan asynchronous sehingga l
 6.halaman delete data
 
 ![home](https://github.com/asharimidana/img/blob/main/deletedata.png)
+
+7. halaman detail mahasiswa
+
+![detail](https://github.com/asharimidana/img/blob/main/detail.png)
+
+7. halaman edit detail mahasiswa
+
+![detail](https://github.com/asharimidana/img/blob/main/updatedetail.png)
