@@ -49,4 +49,5 @@ password: 123456
 ```
 
 ### Tampilan Dan Fitur Aplikasi
----
+------------
+![Demo GIF](https://github.com/asharimidana/img/blob/main/ASHARI_MIDANA_APLIKASI_PENGELOLA_DATA_MAHASISWA_AdobeExpress.gif)
