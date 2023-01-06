@@ -6,18 +6,18 @@ const MhsList = ({ data }) => {
 	const [datax, setMhs] = useState([]);
 
 	useEffect(() => {
+		getMhss()
 		setMhs(data)
-	}, [data]);
+	}, []);
 
 	const getMhss = async () => {
 		const response = await axios.get("http://localhost:5000/");
-		setMhs(response.data)
 
 	};
 
 	const [value, setValue] = useState("");
 	const handleSubmit = () => {
-		getMhss()
+		setMhs()
 	};
 
 	return (
@@ -36,7 +36,7 @@ const MhsList = ({ data }) => {
 				</tr>
 			</thead>
 			<tbody>
-				{datax.map((dat, index) => (
+				{data.map((dat, index) => (
 					<tr key={dat.id}>
 						<td>{index + 1}</td>
 						<td>{dat.nama}</td>

@@ -18,6 +18,7 @@ const AddMhs = () => {
 		try {
 			 await axios.post(`http://localhost:5000/mhs/`, {
 				nama,
+				nim,
 				prodi,
 				semester,
 				kelas,

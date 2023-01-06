@@ -23,6 +23,7 @@ import {
 	updateDetailMhs,
 	// deleteDetailMhs
 } from "../controllers/DetailMhsControler.js";
+import { searchData } from "../controllers/SearchData.js";
 
 const router = express.Router();
 //login user
@@ -49,6 +50,7 @@ router.delete('/mhs/:id',  deleteMhs);
 
 //detail mahasiswa
 router.get('/detail',  getDetailMhs);
+router.get('/s/',  searchData);
 router.get('/detail/:id',  getDetailMhsById);
 router.post('/detail', createDetailMhs);
 router.patch('/detail/:id', updateDetailMhs);
