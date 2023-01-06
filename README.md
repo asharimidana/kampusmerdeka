@@ -25,9 +25,28 @@ git clone https://github.com/asharimidana/kampusmerdeka.git
 cd ./kampusmerdeka/backend
 npm install
 ```
+untuk menjalankan server expressjs ketik:
+```shell
+npm run dev
+```
 jika menggunakan yarn bisa ketik `yarn install`
 
 ```shell
 cd ./kampusmerdeka/frontend
 npm install
 ```
+untuk menjalankan reacjs ketik:
+```shell
+npm run start
+```
+2. setelah itu jalankan mysql dan buat database crud_db atau dapat dibuat melalui phpmyadmin
+3. import crud_db.sql melalui phpmy admin
+4. selah itu login ke sistem 
+```shell
+masuk pada: http://localhost:3000/login
+username: msib@gmail.com
+password: 123456
+```
+
+### Tampilan Dan Fitur Aplikasi
+---
