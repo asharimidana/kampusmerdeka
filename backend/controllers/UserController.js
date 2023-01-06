@@ -28,7 +28,12 @@ export const getUserById = async (req, res) => {
 
 export const loginUser = async (req, res) => {
 	// email verification
-	const user = await User.findOne({ email: req.body.email });
+	const user = await User.findOne({
+		where: {
+			email: req.body.email
+		}
+	});
+	console.log(req.body.email)
 	if (!user) return res.status(400).json({
 		status: res.statuscode,
 		message: 'email anda salah'
@@ -37,7 +42,7 @@ export const loginUser = async (req, res) => {
 	const validPassword = await bcrypt.compare(req.body.password, user.password)
 	if (!validPassword) return res.status(400).json({
 		status: res.statuscode,
-		message: 'password anda salah '
+		message: 'password anda salah'
 	})
 
 	// res.send('berhasil login');

@@ -9,15 +9,15 @@ const AddMhs = () => {
 	const [semester, setSemester] = useState("");
 	const [kelas, setKelas] = useState("");
 	const [angkatan, setAngkatan] = useState("");
+	const [mhId, setMhid] = useState(30);
 	const navigate = useNavigate();
 
 
 	const saveMhs = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post(`http://localhost:5000/mhs/`, {
+			 await axios.post(`http://localhost:5000/mhs/`, {
 				nama,
-				nim,
 				prodi,
 				semester,
 				kelas,

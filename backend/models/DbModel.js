@@ -26,14 +26,14 @@ export const Mhs = db.define('mhs', {
 
 // tabel detail mahasiswa
 export const MhsDetail = db.define('mhs_detail', {
-	nik: DataTypes.INTEGER,
+	nik: DataTypes.STRING,
 	tempa_lhr: DataTypes.STRING,
 	tgl: DataTypes.DATE,
-	hp: DataTypes.INTEGER,
+	hp: DataTypes.STRING,
 	jk: DataTypes.STRING,
 	agama: DataTypes.STRING,
 	wna: DataTypes.STRING,
-	nisn: DataTypes.INTEGER,
+	nisn: DataTypes.STRING,
 	Ukuran_baju: DataTypes.CHAR,
 	mhId: DataTypes.INTEGER,
 }, {

@@ -18,9 +18,9 @@ import {
 
 import {
 	getDetailMhs,
-	// getDetailMhsById,
+	getDetailMhsById,
 	createDetailMhs,
-	// updateDetailMhs,
+	updateDetailMhs,
 	// deleteDetailMhs
 } from "../controllers/DetailMhsControler.js";
 
@@ -49,8 +49,8 @@ router.delete('/mhs/:id',  deleteMhs);
 
 //detail mahasiswa
 router.get('/detail',  getDetailMhs);
-// router.get('/detail/:id', VerifyToken, getDetailMhsById);
-router.post('/detail', VerifyToken, createDetailMhs);
-// router.patch('/detail/:id', VerifyToken, updateDetailMhs);
-// router.delete('/detail/:id', VerifyToken, deleteDetailMhs);
+router.get('/detail/:id',  getDetailMhsById);
+router.post('/detail', createDetailMhs);
+router.patch('/detail/:id', updateDetailMhs);
+// router.delete('/detail/:id',  deleteDetailMhs);
 export default router;

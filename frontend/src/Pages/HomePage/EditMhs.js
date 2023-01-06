@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import Sidebar from "../../components/SideBar";
 
 const EditUser = () => {
 	const [nama, setName] = useState("");
@@ -9,8 +10,6 @@ const EditUser = () => {
 	const [semester, setSemester] = useState("");
 	const [kelas, setKelas] = useState("");
 	const [angkatan, setAngkatan] = useState("");
-	// const [email, setEmail] = useState("");
-	// const [gender, setGender] = useState("Male");
 	const navigate = useNavigate();
 	const { id } = useParams();
 
@@ -23,6 +22,11 @@ const EditUser = () => {
 		try {
 			await axios.patch(`http://localhost:5000/mhs/${id}`, {
 				nama,
+				nim,
+				prodi,
+				semester,
+				kelas,
+				angkatan
 			});
 			navigate("/");
 		} catch (error) {
@@ -41,18 +45,19 @@ const EditUser = () => {
 	};
 
 	return (
-		<div className="columns mt-5 is-centered">
-			<div className="column is-half">
+		<div className="columns mt-0 is-centered">
+			<Sidebar />
+			<div className="column is-10 mt-0 is-half p-5" style={{ "border-left": "solid hsl(0, 0%, 71%) 1px" }}>
 				<form onSubmit={updateUser}>
 					<div className="field">
-						<label className="label">Name</label>
+						<label className="label">Nama</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
 								value={nama}
 								onChange={(e) => setName(e.target.value)}
-								placeholder="Name"
+								placeholder="Nama"
 							/>
 						</div>
 					</div>
@@ -64,55 +69,55 @@ const EditUser = () => {
 								className="input"
 								value={nim}
 								onChange={(e) => setNim(e.target.value)}
-								placeholder="Name"
+								placeholder="Nim"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">NIM</label>
+						<label className="label">Prodi</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
 								value={prodi}
 								onChange={(e) => setProdi(e.target.value)}
-								placeholder="Name"
+								placeholder="Prodi"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">NIM</label>
+						<label className="label">Semester</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
 								value={semester}
 								onChange={(e) => setSemester(e.target.value)}
-								placeholder="Name"
+								placeholder="Semester"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">NIM</label>
+						<label className="label">Kelas</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
 								value={kelas}
 								onChange={(e) => setKelas(e.target.value)}
-								placeholder="Name"
+								placeholder="Kelas"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">NIM</label>
+						<label className="label">Angkatan</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
 								value={angkatan}
 								onChange={(e) => setAngkatan(e.target.value)}
-								placeholder="Name"
+								placeholder="Angkatan"
 							/>
 						</div>
 					</div>

@@ -14,12 +14,18 @@ export const getDetailMhsById = async (req, res) => {
 	try {
 		const response = await MhsDetail.findOne({
 			where: {
-				id: req.params.id
+				mhId: req.params.id
 			}
 		});
+
+		if (!response) {
+			res.status(400).json({
+				status: res.statuscode,
+				message: 'Tidak ada Data ada'
+			})
+		}
 		res.status(200).json(response);
 	} catch (error) {
-		console.log(error.message);
 	}
 }
 
@@ -30,11 +36,11 @@ export const createDetailMhs = async (req, res) => {
 		tgl: req.body.tgl,
 		hp: req.body.hp,
 		jk: req.body.jk,
-		agama: req.body.agama, 
-		wna:req.body.wna, 
+		agama: req.body.agama,
+		wna: req.body.wna,
 		nisn: req.body.nisn,
-		Ukuran_baju: req.body.Ukuran_baju,
-		mhid: req.body.mhid,
+		Ukuran_baju: req.body.ukuran_baju,
+		mhId: req.body.mhId,
 	});
 	try {
 		await mhsDetail.save();
@@ -44,18 +50,18 @@ export const createDetailMhs = async (req, res) => {
 	}
 }
 
-// export const updateDetailMhs = async (req, res) => {
-// 	try {
-// 		await MhsDetail.update(req.body, {
-// 			where: {
-// 				id: req.params.Id,
-// 			}
-// 		});
-// 		res.status(200).json({ msg: "User Updated" });
-// 	} catch (error) {
-// 		console.log(error.message);
-// 	}
-// }
+export const updateDetailMhs = async (req, res) => {
+	try {
+		await MhsDetail.update(req.body, {
+			where: {
+				mhId: req.params.id,
+			}
+		});
+		res.status(200).json({ msg: "User Updated" });
+	} catch (error) {
+		console.log(error.message);
+	}
+}
 //
 // export const deleteDetailMhs = async (req, res) => {
 // 	try {
