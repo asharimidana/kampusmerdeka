@@ -5,8 +5,8 @@ Universitas : Halu Oleo </br>
 Asal Daerah : Kendari Sulawesi Tenggara
 
 ### About
-aplikasi ini dibangun menggunakan Express js dan Reactjs
-Fitur utamanya yakni CRUD data mahasiswa secara asynchronous sehingga bisa berjalan tanpa reload membuat aplikasi lebih powerful dan cepat.
+aplikasi ini dibangun menggunakan Express js dan Reactjs,
+Fitur utamanya yakni CRUD data mahasiswa secara asynchronous, sehingga bisa berjalan tanpa reload membuat aplikasi lebih powerful dan cepat.
 
 Dependencies
 ------------
@@ -50,4 +50,25 @@ password: 123456
 
 ### Tampilan Dan Fitur Aplikasi
 ------------
-![Demo GIF](https://github.com/asharimidana/img/blob/main/ASHARI_MIDANA_APLIKASI_PENGELOLA_DATA_MAHASISWA_AdobeExpress.gif)
+![Demo GIF](https://github.com/asharimidana/img/blob/main/review.gif)
+
+1. halaman login
+![Demo GIF](https://github.com/asharimidana/img/blob/main/1.png)
+
+2. tampilan apabila username salah
+![home](https://github.com/asharimidana/img/blob/main/2.png)
+
+
+3. homepage
+![home](https://github.com/asharimidana/img/blob/main/3.png)
+
+semua element di dalam aplikasi dibuat aga bisa berjalan asynchronous sehingga lebih cepat dan efisien
+
+4.halaman tambah data
+![home](https://github.com/asharimidana/img/blob/main/tambahdata.png)
+
+5.halaman update data
+![home](https://github.com/asharimidana/img/blob/main/tambahdata.png)
+
+6.halaman delete data
+![home](https://github.com/asharimidana/img/blob/main/deletedata.png)
